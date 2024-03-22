@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/03/20 16:39:03 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/03/22 14:59:10 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,13 @@ typedef struct  s_stack
 void	ra(t_stack **a);
 void	rb(t_stack **b);
 void	rr(t_stack **a, t_stack **b);
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
+void	rrr(t_stack **a, t_stack **b);
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
 
 #endif
