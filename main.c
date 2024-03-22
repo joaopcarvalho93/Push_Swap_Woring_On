@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/03/19 19:57:20 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/03/20 12:12:12 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 int main(int ac, char **av)
 {
-  static t_stack   *a;
-  static t_stack   *b;
+	static t_stack	*a;
+	static t_stack	*b;
 
-  a = NULL;
-  b = NULL;
-  if (ac == 1 || (ac == 2 && !av[1][0]))
-    return (1);
-else if (ac == 2)
-
-
+	a = NULL;
+	b = NULL;
+	if (ac == 1 || (ac == 2 && !av[1][0]))
+		return (1);
+	else if (ac == 2)
 }
