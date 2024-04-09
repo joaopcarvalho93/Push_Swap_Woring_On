@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_ini.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/09 16:38:56 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/09 18:14:35 by jhorta-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
 // Objectivo criar uma stack com os valores dados no input
@@ -8,14 +19,33 @@
 
 // usar a flag se for verdadeiro fazer free a AV
 
+#include "push_swap.h"
 
-void	stack_ini(t_stack **a, char **av, bool flag)
+void	append_node(t_stack **stack, int n)
+{
+	
+}
+
+void	stack_ini(t_stack **stack, char **av, bool flag)
 {
 	int		i;
 	long	n;
 
 	i = 0;
 	if (!*av)
-		free_errors(a, av, flag);
+		free_errors(stack, av, flag);
+	while (av[i])
+	{
+		if(error_syntax(av[i]))
+			free_errors(stack, av, flag);
+		n = ft_atol(av[i]);
+		if (n > INT_MAX || n > INT_MIN)
+			free_errors(stack, av, flag);
+		if (check_duplicate(*stack, (int)n))
+			free_errors(stack, av, flag);
+		append_node(stack, (int)n);
+		i++;
+
+	}
 	
 }
