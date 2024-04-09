@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:42:32 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/03/22 14:56:32 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/03/25 17:45:11 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	push(t_stack **src, t_stack **dest)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!*src)
 		return (0);
