@@ -3,28 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   stack_ini.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:38:56 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/09 18:14:35 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/10 01:06:02 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 
-// Objectivo criar uma stack com os valores dados no input
-// Verificar se: 
+// Objectivo criar uma stack com os valores dados no input.
+// Verificar se:
 // - Existem valores duplicados 
 // - Erros de syntax 
 // - Over ou untherflow
 
 // usar a flag se for verdadeiro fazer free a AV
-
-#include "push_swap.h"
-
-void	append_node(t_stack **stack, int n)
-{
-	
-}
 
 void	stack_ini(t_stack **stack, char **av, bool flag)
 {
@@ -36,7 +30,7 @@ void	stack_ini(t_stack **stack, char **av, bool flag)
 		free_errors(stack, av, flag);
 	while (av[i])
 	{
-		if(error_syntax(av[i]))
+		if (error_syntax(av[i]))
 			free_errors(stack, av, flag);
 		n = ft_atol(av[i]);
 		if (n > INT_MAX || n > INT_MIN)
@@ -45,7 +39,5 @@ void	stack_ini(t_stack **stack, char **av, bool flag)
 			free_errors(stack, av, flag);
 		append_node(stack, (int)n);
 		i++;
-
 	}
-	
 }

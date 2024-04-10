@@ -6,7 +6,7 @@
 /*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:42:32 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/03/25 17:45:11 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/10 19:13:50 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static void	push(t_stack **src, t_stack **dest)
 		push(a, b);
 		ft_print("pa\n");
 	}
-	void	pb(t_stack **a, t_stack **b)
+	void	pb(t_stack **b, t_stack **a)
 	{
-		push(b, a);
+		push(a, b);
 		ft_printf("pb\n");
 	}
 }

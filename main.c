@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/09 12:29:29 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/10 19:00:57 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,17 @@ int main(int ac, char **av)
 	a = NULL;
 	b = NULL;
 	if (ac == 1 || (ac == 2 && !av[1][0]))
+	{
+		write (2, "Error\n", 6);
 		return (1);
+	}
 	else if (ac == 2)
-		ft_split(av[1], ' ');
+		av = ft_split(av[1], ' ');
 	stack_ini(&a, av + 1, ac == 2);
+	ft_free_array(av);
+	if (!is_sorted(a))
+		sort_stack(a, b); // Criar
+	else
+		ft_free_stack(&a);
+	return (0);
 }
