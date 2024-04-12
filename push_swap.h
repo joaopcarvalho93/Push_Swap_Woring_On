@@ -6,7 +6,7 @@
 /*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/10 19:01:23 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/11 15:57:41 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ t_stack		find_last(t_stack *stack);
 t_stack		*return_cheapest(t_stack *stack);
 int			stack_len(t_stack *stack);
 bool		is_sorted(t_stack *stack);
+void		sort_tree(t_stack **stack);
 
 
 // Stack moves

@@ -6,7 +6,7 @@
 /*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/10 19:00:57 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/11 16:02:17 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ int main(int ac, char **av)
 	stack_ini(&a, av + 1, ac == 2);
 	ft_free_array(av);
 	if (!is_sorted(a))
-		sort_stack(a, b); // Criar
-	else
-		ft_free_stack(&a);
+		sort_stack(a, b);
+	ft_free_stack(&a);
 	return (0);
 }
