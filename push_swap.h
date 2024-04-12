@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/11 15:57:41 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/12 18:48:53 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,22 @@
 typedef struct s_stack
 {
 	int				value;
-	long			current_position;
-	int				final_index;
+	long			current_position; // por usar
+	int				index;
 	int				push_cost;
-	bool			above_mediun;
-	bool			cheapest;
-	struct s_stack	*target;
+	bool			above_medium;
+	bool			cheapest; // por usar
+	struct s_stack	*target; // por usar
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
 
 // Handle errors 
 
-int			check_duplicate(t_stack *stack, int n);
-void		ft_free_stack(t_stack **stack);
-void		free_errors(t_stack **stack, char **argv, bool flag);
-int			check_syntax(char *str);
+int			check_duplicate(t_stack *stack, int n); // por criar
+void		ft_free_stack(t_stack **stack); // criar
+void		free_errors(t_stack **stack, char **argv, bool flag);// criar
+int			check_syntax(char *str); // criar
 
 // stack initialization
 
@@ -47,11 +47,18 @@ void		append_node(t_stack **stack, int n);
 
 // Nodes initialialization
 
+void		int_node_a(t_stack *a, t_stack *b);
+void		index(t_stack *stack);
+void		cost_analysis(t_stack *a, t_stack *b);
+
 // Algorithm
+void		sort_stack(t_stack **a, t_stack **b);
+void		sort_stacks_a_b(t_stack **a, t_stack **b);
 
 // Stack Utils
 
 t_stack		find_last(t_stack *stack);
+t_stack 	find_max(t_stack *stack);
 t_stack		*return_cheapest(t_stack *stack);
 int			stack_len(t_stack *stack);
 bool		is_sorted(t_stack *stack);

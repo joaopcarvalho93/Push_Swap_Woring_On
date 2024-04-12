@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack.c                                       :+:      :+:    :+:   */
+/*   current_index.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 15:24:16 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/12 17:16:16 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/12 17:24:34 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/12 17:34:51 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 
-// Comecar por verificar se a stack a tem menos de 4 nodes.
-// Se tiver menos fazer sort. Se tiver mais abrir nova funcao
-
-void	sort_stack(t_stack **a, t_stack **b)
+void	index(t_stack *stack)
 {
-	t_stack	biggest;
+	int	i;
+	int	median;
 
-	if (!a)
-		return (0);
-	if (stack_len(a) == 2)
-		sa(&a);
-	else if (stack_len(a) == 3)
-		sort_tree(&a)
-	else
-		sort_stacks_a_b(&a, &b); //criar
+	if (!stack)
+		return;
+	i = 0;
+	median = stack_len(stack) / 2;
+	while (stack)
+	{
+		stack->index = i;
+		if (i <= median)
+			stack->above_medium = true;
+		else
+			stack->above_medium = false;
+		i++;
+		stack = stack->next;
+	}
 }
