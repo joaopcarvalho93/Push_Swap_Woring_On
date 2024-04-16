@@ -1,6 +1,6 @@
 
 
-#include "push_swap/push_swap.h"
+#include "../push_swap.h"
 
 // Criar novo node
 // verificar se a stack está vazia ou se já tem node

@@ -6,14 +6,15 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:41:49 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/12 18:23:21 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/16 15:21:43 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-// O target_node e o numero mais pequeno mais proximo
-// Caso nao exista encontrar numero maximo (match == INT_MIN)
+// O target_node e o numero mais pequeno mais proximo.
+// target dos nodes do stack a para o b
+// Caso nao exista, encontrar numero maximo (match == INT_MIN).
 
 void	set_target_node_a(t_stack *a, t_stack *b)
 {

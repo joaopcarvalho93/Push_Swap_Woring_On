@@ -6,14 +6,14 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:34 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/12 18:19:14 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/16 15:41:55 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-t_stack	find_last(t_stack *stack)
+t_stack	find_last(t_stack *stack) //por fazer
 {
 	if (!stack)
 		return (NULL);
@@ -44,5 +44,22 @@ t_stack find_max(t_stack *stack)
 
 t_stack find_min(t_stack *stack)
 {
+	int	min;
+	t_stack *min_node;
+
+	if (!stack)
+		return (NULL);
+	min = INT_MAX;
+	min_node = NULL;
+	while (stack)
+	{
+		if (stack->value < min)
+		{
+			min = stack->value;
+			min_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (min_node);
 	
 }

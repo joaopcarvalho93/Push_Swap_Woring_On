@@ -6,11 +6,11 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:24:34 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/12 17:34:51 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/16 15:02:36 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	index(t_stack *stack)
 {

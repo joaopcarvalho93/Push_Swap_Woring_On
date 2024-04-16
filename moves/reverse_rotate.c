@@ -6,13 +6,13 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:20 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/09 16:39:21 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/16 15:02:13 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	reverse_ro(t_stack **stack)
 {

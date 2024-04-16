@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   utils_errors.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:41 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/10 18:20:12 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/16 15:03:05 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "../push_swap.h"
 
 int	check_duplicate(t_stack *stack, int n)
 

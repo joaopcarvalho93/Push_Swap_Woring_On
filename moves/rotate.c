@@ -6,13 +6,13 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:27 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/09 16:39:28 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/16 15:01:30 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	rotate(t_stack **stack)
 {

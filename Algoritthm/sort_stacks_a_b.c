@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:20:57 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/12 17:23:39 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/16 16:58:31 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	sort_stacks_a_b(t_stack **a, t_stack **b)
 	while (len_a-- > 3 && !is_sorted(*a))
 	{
 		init_nodes_a(*a, *b);
-		move_a_to_b(a, b);
+		move_a_to_b(a, b); //acabar
 	}
 }
