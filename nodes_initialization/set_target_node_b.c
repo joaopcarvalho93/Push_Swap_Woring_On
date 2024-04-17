@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:54:03 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 15:42:16 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:30:53 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // target dos nodes do stack b para o a
 // Caso nao exista, encontrar numero minimo (match == INT_MAX)
 
-void	set_target_b(t_stack *a, t_stack *b)
+void	set_target_node_b(t_stack *a, t_stack *b)
 {
 	t_stack	*node_a;
 	t_stack	*target_node;

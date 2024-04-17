@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack.c                                       :+:      :+:    :+:   */
+/*   int_node_b.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 15:24:16 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/17 17:43:31 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/17 17:25:42 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/17 17:34:01 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 
-// Comecar por verificar se a stack a tem menos de 4 nodes.
-// Se tiver menos fazer sort. Se tiver mais abrir nova funcao
+// Verificar a posicao de cada node
+// Verificar o target node
 
-void	sort_stack(t_stack **a, t_stack **b)
+void	int_node_b(t_stack *a, t_stack *b)
 {
-	t_stack	biggest;
-
-	if (!a)
-		return (0);
-	if (stack_len(a) == 2)
-		sa(&a);
-	else if (stack_len(a) == 3)
-		sort_tree(&a)
-	else
-		sort_stacks_a_b(&a, &b);
+	index(a);
+	index(b);
+	set_target_b(a, b);
 }

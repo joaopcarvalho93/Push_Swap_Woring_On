@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack.c                                       :+:      :+:    :+:   */
+/*   get_cheapest.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 15:24:16 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/17 17:43:31 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/17 14:05:03 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/17 14:10:19 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../push_swap.h"
 
-#include "push_swap.h"
-
-// Comecar por verificar se a stack a tem menos de 4 nodes.
-// Se tiver menos fazer sort. Se tiver mais abrir nova funcao
-
-void	sort_stack(t_stack **a, t_stack **b)
+t_stack		*get_cheapest(t_stack *stack)
 {
-	t_stack	biggest;
-
-	if (!a)
-		return (0);
-	if (stack_len(a) == 2)
-		sa(&a);
-	else if (stack_len(a) == 3)
-		sort_tree(&a)
-	else
-		sort_stacks_a_b(&a, &b);
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
 }
