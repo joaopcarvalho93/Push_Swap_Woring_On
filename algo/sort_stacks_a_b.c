@@ -6,11 +6,11 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:20:57 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/17 17:56:38 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/22 22:17:43 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // Comecar por passar os dois primeiros nodes para a stack b.
 // Se a continuar a ter 3 ou mais e nao estar organizado 

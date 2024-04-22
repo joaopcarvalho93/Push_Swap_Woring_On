@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:47:06 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/09 17:40:30 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/22 22:31:40 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
-# include "libft/libft.h"
-# include "print_f/ft_printf.h"
+# include <stdarg.h>
+# include "libft.h"
+
+# define UPPER_CASE "0123456789ABCDEF"
+# define LOWER_CASE "0123456789abcdef"
+# define BASE16 16
+# define BASE10 10
 
 typedef struct s_list
 {
@@ -69,5 +75,14 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-
+void				ft_free_array(char **str);
+int					ft_putchar(int c);
+int					ft_puthex(int n, char c);
+int					ft_putnbr(long n, int base);
+int					ft_printformat(char specifier, va_list ap);
+int					ft_printf(const char *format, ...);
+int					ft_puthexpoint(long n);
+int					ft_putpoint(void *address);
+int					ft_putstr(char *str);
+int					ft_putunsnbr(unsigned int n);
 #endif

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putpoint.c                                      :+:      :+:    :+:   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 17:21:42 by jhorta-c          #+#    #+#             */
-/*   Updated: 2023/11/28 21:03:23 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/22 21:15:00 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/22 21:16:59 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_puthexpoint(long n)
 {
@@ -47,4 +47,35 @@ int	ft_putpoint(void *address)
 		count += ft_puthexpoint((long)address);
 	}
 	return (count + 2);
+}
+
+int	ft_putstr(char *str)
+{
+	int	count;
+
+	if (!str)
+		return (ft_putstr("(null)"));
+	count = 0;
+	while (*str)
+	{
+		count += ft_putchar((int)*str);
+		++str;
+	}
+	return (count);
+}
+
+int	ft_putunsnbr(unsigned int n)
+{
+	int	count;
+
+	count = 0;
+	if (n < 10)
+	{
+		count += ft_putchar(n + '0');
+	}
+	else
+	{
+		count += ft_putnbr((n / 10), BASE10) + ft_putnbr((n % 10), BASE10);
+	}
+	return (count);
 }

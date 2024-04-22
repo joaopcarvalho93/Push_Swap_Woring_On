@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/17 18:36:36 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/22 22:22:14 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include "./libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
-# include "./print_f/ft_printf.h"
 # include <stdbool.h>
 # include <limits.h>
 
@@ -34,8 +33,8 @@ typedef struct s_stack
 
 // Handle errors 
 
-int			check_duplicate(t_stack *stack, int n); // por criar
-void		ft_free_stack(t_stack **stack); // criar
+int			check_duplicate(t_stack *stack, int n);
+void		ft_free_stack(t_stack **stack);
 void		free_errors(t_stack **stack, char **av, bool flag);
 int			check_syntax(char *str); // criar
 
@@ -59,6 +58,8 @@ void		sort_stack(t_stack **a, t_stack **b);
 void		sort_stacks_a_b(t_stack **a, t_stack **b);
 void		sort_tree(t_stack **stack);
 void		move_a_to_b(t_stack **a, t_stack **b);
+void		move_b_to_a(t_stack **a, t_stack **b);
+void		stack_ini(t_stack **stack, char **av, bool flag);
 
 // Stack Utils
 

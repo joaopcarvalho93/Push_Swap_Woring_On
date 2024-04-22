@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_ini.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:38:56 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/10 01:06:02 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/22 22:17:49 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // Objectivo criar uma stack com os valores dados no input.
 // Verificar se:

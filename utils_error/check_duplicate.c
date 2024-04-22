@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*   check_duplicate.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 16:55:24 by jhorta-c          #+#    #+#             */
-/*   Updated: 2023/11/28 20:51:40 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/18 13:20:19 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/18 13:22:20 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../push_swap.h"
 
-int	ft_puthex(int n, char c)
+int	check_duplicate(t_stack *stack, int n)
 {
-	int				count;
-	unsigned int	nb;
-
-	count = 0;
-	nb = n;
-	if (nb < BASE16)
+	if (!stack)
+		return (0);
+	while (stack)
 	{
-		if (c == 'x')
-		{
-			count += ft_putchar(LOWER_CASE[nb]);
-		}
-		else if (c == 'X')
-			count += ft_putchar(UPPER_CASE[nb]);
+		if (n == stack->value)
+			return (1);
+		stack = stack->next;
 	}
-	else
-	{
-		count += ft_puthex(nb / BASE16, c);
-		count += ft_puthex(nb % BASE16, c);
-	}
-	return (count);
+	return (0);
 }

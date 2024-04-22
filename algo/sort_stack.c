@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/28 16:44:41 by jhorta-c          #+#    #+#             */
-/*   Updated: 2023/11/28 20:06:15 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/12 15:24:16 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/22 22:17:38 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
 
-int	ft_putstr(char *str)
+#include "../push_swap.h"
+
+// Comecar por verificar se a stack a tem menos de 4 nodes.
+// Se tiver menos fazer sort. Se tiver mais abrir nova funcao
+
+void	sort_stack(t_stack **a, t_stack **b)
 {
-	int	count;
+	t_stack	biggest;
 
-	if (!str)
-		return (ft_putstr("(null)"));
-	count = 0;
-	while (*str)
-	{
-		count += ft_putchar((int)*str);
-		++str;
-	}
-	return (count);
+	if (!a)
+		return (0);
+	if (stack_len(a) == 2)
+		sa(&a);
+	else if (stack_len(a) == 3)
+		sort_tree(&a);
+	else
+		sort_stacks_a_b(&a, &b);
 }
