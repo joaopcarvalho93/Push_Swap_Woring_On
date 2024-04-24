@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   current_index.c                                    :+:      :+:    :+:   */
+/*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:24:34 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 15:02:36 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 16:36:51 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	index(t_stack *stack)
+void	calculate_index(t_stack *stack)
 {
 	int	i;
 	int	median;

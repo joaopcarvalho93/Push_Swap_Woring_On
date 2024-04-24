@@ -1,7 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   return_cheapest.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/24 15:24:20 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/24 15:24:48 by jhorta-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
-
-//REVER
 
 t_stack	*return_cheapest(t_stack *stack)
 {
@@ -15,4 +24,3 @@ t_stack	*return_cheapest(t_stack *stack)
 	}
 	return (NULL);
 }
-

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:38:56 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/22 22:17:49 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:01:28 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	stack_ini(t_stack **stack, char **av, bool flag)
 		free_errors(stack, av, flag);
 	while (av[i])
 	{
-		if (error_syntax(av[i]))
+		if (check_syntax(av[i]))
 			free_errors(stack, av, flag);
 		n = ft_atol(av[i]);
 		if (n > INT_MAX || n > INT_MIN)

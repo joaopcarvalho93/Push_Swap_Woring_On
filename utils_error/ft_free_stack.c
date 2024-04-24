@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_free_stack.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/24 15:12:45 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/24 18:28:40 by jhorta-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
 
@@ -7,7 +18,7 @@ void	ft_free_stack(t_stack **stack)
 	t_stack	*tmp;
 
 	if (!*stack)
-		return (0);
+		return ;
 	current = *stack;
 	tmp = NULL;
 	while (current)

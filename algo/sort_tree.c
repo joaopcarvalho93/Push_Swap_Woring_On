@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_tree.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:03:47 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/23 15:20:17 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/24 17:29:28 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	sort_tree(t_stack **stack)
 {
 	t_stack	*biggest;
 
-	biggest = find_biggest(*stack);
+	biggest = find_max(*stack);
 	if ((*stack)->value == biggest->value)
 		ra(stack);
 	else if ((*stack)->next->value == biggest->value)

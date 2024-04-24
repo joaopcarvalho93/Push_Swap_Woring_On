@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks_a_b.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:20:57 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/23 15:22:59 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/24 17:23:23 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ void	sort_stacks_a_b(t_stack **a, t_stack **b)
 		pb(b, a);
 	while (len_a-- > 3 && !is_sorted(*a))
 	{
-		init_nodes_a(*a, *b);
+		int_node_a(*a, *b);
 		move_a_to_b(a, b);
 	}
 	sort_tree(a);
 	while (*b)
 	{
-		init_nodes_b(*a, *b);
+		int_node_b(*a, *b);
 		move_b_to_a(a, b);
 	}
-	index(*a);
+	calculate_index(*a);
 	min_top(a);
 }

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:47:06 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/22 22:31:40 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:19:30 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,5 @@ int					ft_puthexpoint(long n);
 int					ft_putpoint(void *address);
 int					ft_putstr(char *str);
 int					ft_putunsnbr(unsigned int n);
+long				ft_atol(const char *str);
 #endif

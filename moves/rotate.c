@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:27 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 15:01:30 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:22:48 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	rotate(t_stack **stack)
 	t_stack	*last_node;
 
 	if (!*stack || !(*stack)->next)
-		return (0);
+		return ;
 	last_node = find_last(*stack);
 	last_node->next = *stack;
 	*stack = (*stack)->next;
@@ -38,7 +38,7 @@ void	rb(t_stack **b)
 	ft_printf("rb\n");
 }
 
-void	rr(t_stack **a, t_stack b)
+void	rr(t_stack **a, t_stack **b)
 {
 	rotate(a);
 	rotate(b);

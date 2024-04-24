@@ -6,13 +6,13 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:05:03 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/17 14:10:19 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:14:44 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_stack		*get_cheapest(t_stack *stack)
+t_stack	*get_cheapest(t_stack *stack)
 {
 	if (!stack)
 		return (NULL);

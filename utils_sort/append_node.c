@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   append_node.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/24 15:13:15 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/24 18:28:02 by jhorta-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../push_swap.h"
 
@@ -13,7 +24,7 @@ void	append_node(t_stack **stack, int n)
 	last_node = NULL;
 	node = malloc(sizeof(t_stack));
 	if (!node)
-		return (NULL);
+		return ;
 	node->next = NULL;
 	node->value = n;
 	if (!*stack)

@@ -6,7 +6,7 @@
 #    By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/10 13:28:10 by jhorta-c          #+#    #+#              #
-#    Updated: 2023/11/13 18:04:36 by jhorta-c         ###   ########.fr        #
+#    Updated: 2024/04/24 19:52:53 by jhorta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,9 @@ SOURCES = \
 	ft_putnbr_fd.c \
 	ft_strmapi.c \
 	ft_striteri.c \
+	ft_free_array.c \
+	ft_printf.c \
+	ft_printf_utils.c \
 	
 BSOURCES = \
 	ft_lstnew.c \

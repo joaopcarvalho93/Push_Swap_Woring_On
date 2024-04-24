@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/23 16:00:02 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/24 18:25:58 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ void		append_node(t_stack **stack, int n);
 
 void		int_node_a(t_stack *a, t_stack *b);
 void		int_node_b(t_stack *a, t_stack *b);
-void		index(t_stack *stack);
+void		calculate_index(t_stack *stack);
 void		cost_analysis(t_stack *a, t_stack *b);
 void		set_target_node_a(t_stack *a, t_stack *b);
 void		set_target_node_b(t_stack *a, t_stack *b);
 void		set_cheapest(t_stack *stack);
 
 // Algorithm
-void		sort_stack(t_stack **a, t_stack **b);
+void		sort_stack(t_stack *a, t_stack *b);
 void		sort_stacks_a_b(t_stack **a, t_stack **b);
 void		sort_tree(t_stack **stack);
 void		move_a_to_b(t_stack **a, t_stack **b);
@@ -63,7 +63,7 @@ void		stack_ini(t_stack **stack, char **av, bool flag);
 
 // Stack Utils
 
-t_stack		find_last(t_stack *stack);
+t_stack		*find_last(t_stack *stack);
 t_stack		*find_max(t_stack *stack);
 t_stack		*find_min(t_stack *stack);
 t_stack		*return_cheapest(t_stack *stack);
@@ -76,7 +76,7 @@ void		min_top(t_stack **a);
 
 void		ra(t_stack **a);
 void		rb(t_stack **b);
-void		rr(t_stack **a, t_stack b);
+void		rr(t_stack **a, t_stack **b);
 void		sa(t_stack **a);
 void		sb(t_stack **b);
 void		ss(t_stack **a, t_stack **b);

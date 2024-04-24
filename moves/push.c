@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:42:32 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/23 15:31:41 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/04/24 18:07:02 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	push(t_stack **src, t_stack **dest)
 	t_stack	*tmp;
 
 	if (!*src)
-		return (0);
+		return ;
 	tmp = *src;
 	*src = (*src)->next;
 	if (!(*dest))
@@ -37,7 +37,7 @@ static void	push(t_stack **src, t_stack **dest)
 void	pa(t_stack **a, t_stack **b)
 {
 	push(a, b);
-	ft_print("pa\n");
+	ft_printf("pa\n");
 }
 
 void	pb(t_stack **b, t_stack **a)

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:03:58 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/18 13:45:58 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:23:26 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	stack_len(t_stack *stack)
 	int	len;
 
 	if (!stack)
-		return (NULL);
+		return (0);
 	len = 0;
 	while (stack)
 	{
@@ -26,4 +26,3 @@ int	stack_len(t_stack *stack)
 	}
 	return (len);
 }
-

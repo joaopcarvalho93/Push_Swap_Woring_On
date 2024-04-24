@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   min_top.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 17:59:23 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 15:23:41 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/24 18:03:56 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/24 18:04:13 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "libft.h"
 
-// No final verificar se o numero menor esta em cima
-void	min_top(t_stack **a)
+long	ft_atol(const char *str)
 {
-	t_stack	*min_nbr;
+	int		i;
+	int		sign;
+	long	nbr;
 
-	if (!*a)
-		return ;
-	min_nbr = find_min(*a);
-	while ((*a)->value != min_nbr->value)
+	i = 0;
+	sign = 1;
+	nbr = 0;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (min_nbr->above_medium)
-			ra(a);
-		else
-			rra(a);
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
+	while (ft_isdigit(str[i]))
+	{
+		nbr = nbr * 10 + (str[i] - '0');
+		i++;
+	}
+	return (nbr * sign);
 }

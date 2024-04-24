@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 17:06:03 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 15:02:20 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:27:13 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	swap(t_stack **stack)
 {
 	if (!*stack || !(*stack)->next)
-		return (0);
+		return ;
 	*stack = (*stack)->next;
 	(*stack)->prev->prev = *stack;
 	(*stack)->prev->next = (*stack)->next;
