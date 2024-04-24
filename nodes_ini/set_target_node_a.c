@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   set_target_node_a.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 17:41:49 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 15:21:43 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:47:27 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ void	set_target_node_a(t_stack *a, t_stack *b)
 	int		match;
 
 	if (!a || !b)
-		return;
+		return ;
 	while (a)
 	{
 		match = INT_MIN;
 		node_b = b;
 		while (node_b)
 		{
-			if(node_b->value > match && node_b->value < a->value)
+			if (node_b->value > match && node_b->value < a->value)
 			{
 				match = node_b->value;
 				target_node = node_b;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/22 22:22:14 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:00:02 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,13 @@ void		stack_ini(t_stack **stack, char **av, bool flag);
 // Stack Utils
 
 t_stack		find_last(t_stack *stack);
-t_stack 	find_max(t_stack *stack);
-t_stack 	find_min(t_stack *stack);
+t_stack		*find_max(t_stack *stack);
+t_stack		*find_min(t_stack *stack);
 t_stack		*return_cheapest(t_stack *stack);
 int			stack_len(t_stack *stack);
 bool		is_sorted(t_stack *stack);
 t_stack		*get_cheapest(t_stack *stack);
 void		min_top(t_stack **a);
-
-
 
 // Stack moves
 

@@ -15,7 +15,7 @@
 void	move_a_to_b(t_stack **a, t_stack **b)
 {
 	t_stack	*cheapest;
-	
+
 	if (!a || !b)
 		return ;
 	cheapest = get_cheapest(a);
@@ -33,5 +33,5 @@ void	move_a_to_b(t_stack **a, t_stack **b)
 		else
 			rrb(b);
 	}
-	pb(b,a);
+	pb(b, a);
 }

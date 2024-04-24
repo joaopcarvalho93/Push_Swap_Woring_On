@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:24:16 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/22 22:17:38 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:23:44 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../push_swap.h"
 

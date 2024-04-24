@@ -18,7 +18,7 @@ void	index(t_stack *stack)
 	int	median;
 
 	if (!stack)
-		return;
+		return ;
 	i = 0;
 	median = stack_len(stack) / 2;
 	while (stack)

@@ -1,5 +1,4 @@
 
-
 #include "../push_swap.h"
 
 // Criar novo node
@@ -29,4 +28,3 @@ void	append_node(t_stack **stack, int n)
 		node->prev = last_node;
 	}
 }
-

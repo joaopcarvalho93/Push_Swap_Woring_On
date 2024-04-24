@@ -15,7 +15,7 @@
 void	ft_free_array(char **str)
 {
 	int	i;
-	
+
 	i = 0;
 	if (!str)
 		return (0);

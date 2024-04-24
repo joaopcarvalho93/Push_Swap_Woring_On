@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   set_cheapest.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:06:10 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 16:37:53 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:35:01 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 // Depois de calcular o custo encontar o node que tem o menor custo.
-// Definir variavel para o INT_MAX e ir valor a valor a ver que node tem o menor.
+// Definir variavel para o INT_MAX e ir valor a valor a ver que node
+// tem o menor.
 // Devolver verdadeiro ou falso
 
 void	set_cheapest(t_stack *stack)

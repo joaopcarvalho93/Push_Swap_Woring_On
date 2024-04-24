@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cost_analysis.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:26:46 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 16:03:53 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:33:52 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@
 // Se tiver em cima o custo e o index.
 // se tiver em baixo e o len - index.
 // O total e a soma do custo para mover na a e b.
-// PARA MELHORAR: ter em consideracao que podemos em alguns casos mover as duas stacks 
+// PARA MELHORAR: ter em consideracao que podemos em 
+// alguns casos mover as duas stacks
 
 void	cost_analysis(t_stack *a, t_stack *b)
 {
 	int	len_a;
 	int	len_b;
-	
+
 	if (!a || !b)
-		return;
+		return ;
 	len_a = stack_len(a);
 	len_b = stack_len(b);
 	while (a)

@@ -4,7 +4,7 @@
 void	ft_free_stack(t_stack **stack)
 {
 	t_stack	*current;
-	t_stack	tmp;
+	t_stack	*tmp;
 
 	if (!*stack)
 		return (0);
@@ -19,4 +19,3 @@ void	ft_free_stack(t_stack **stack)
 	}
 	*stack = NULL;
 }
-

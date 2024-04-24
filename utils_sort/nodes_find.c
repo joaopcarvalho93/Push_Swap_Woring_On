@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   nodes_find.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:34 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/16 15:41:55 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:53:34 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../push_swap.h"
 
@@ -20,13 +19,12 @@ t_stack	find_last(t_stack *stack) //por fazer
 	
 }
 
-
-t_stack find_max(t_stack *stack)
+t_stack	*find_max(t_stack *stack)
 {
-	int	max;
-	t_stack *max_node;
+	int		max;
+	t_stack	*max_node;
 	
-	if(!stack)
+	if (!stack)
 		return (NULL);
 	max = INT_MIN;
 	max_node = NULL;
@@ -42,10 +40,10 @@ t_stack find_max(t_stack *stack)
 	return (max_node);
 }
 
-t_stack find_min(t_stack *stack)
+t_stack	*find_min(t_stack *stack)
 {
-	int	min;
-	t_stack *min_node;
+	int		min;
+	t_stack	*min_node;
 
 	if (!stack)
 		return (NULL);
@@ -61,5 +59,4 @@ t_stack find_min(t_stack *stack)
 		stack = stack->next;
 	}
 	return (min_node);
-	
 }

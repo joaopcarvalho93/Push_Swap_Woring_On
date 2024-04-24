@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "../push_swap.h"
 
 static void	rotate(t_stack **stack)
@@ -46,4 +44,3 @@ void	rr(t_stack **a, t_stack b)
 	rotate(b);
 	ft_printf("rr\n");
 }
-
