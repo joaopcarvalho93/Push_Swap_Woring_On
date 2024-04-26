@@ -5,8 +5,9 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "lldb",
       "request": "launch",
-      "args": [],
-      "cwd": "/Users/jpcarvalho/42_Lisboa/push_swap",
+      "args": ["    "],
+      "cwd": "~/Documents/ENTREGAS/Teste_push_swap/push_swap/libft
+      ",
       "program": "/Users/jpcarvalho/42_Lisboa/push_swap/build/Debug/outDebug"
     }
   ]

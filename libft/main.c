@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_array.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 18:32:28 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/26 15:11:14 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/04/26 17:46:39 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/04/26 21:11:13 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_free_array(char **str)
+int	main(void)
 {
-	int	i;
+	int		i = 0;
+	char	string[] = " w ergeh45 5464747 35656  ola rfrfrf ";
+	char	**strings;
 
-	i = 0;
-	if (!str)
-		return ;
-	while (str[i])
+	strings = ft_split(string, ' ');
+	while (strings[i])
 	{
-		free(str[i]);
+		printf("%s\n", strings[i]);
 		i++;
 	}
-	free(str);
+	return (0);
 }

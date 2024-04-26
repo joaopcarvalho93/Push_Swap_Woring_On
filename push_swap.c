@@ -6,11 +6,12 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 17:13:49 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:22:05 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "libft/libft.h"
 
 // - Criar as duas stacks
 // - Limpar a memoria da stack A e B == NULL
@@ -32,9 +33,16 @@ int	main(int ac, char **av)
 		return (1);
 	}
 	else if (ac == 2)
+	{
 		av = ft_split(av[1], ' ');
-	stack_ini(&a, av + 1, ac == 2);
-	ft_free_array(av);
+		stack_ini(&a, av + 1, true);
+		ft_free_array(av);
+	}
+	else
+	{
+		stack_ini(&a, av + 1, false);
+		ft_free_array(av);
+	}
 	if (!is_sorted(a))
 		sort_stack(a, b);
 	ft_free_stack(&a);

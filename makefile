@@ -6,30 +6,32 @@
 #    By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 13:52:02 by jhorta-c          #+#    #+#              #
-#    Updated: 2024/04/24 20:07:25 by jhorta-c         ###   ########.fr        #
+#    Updated: 2024/04/26 15:57:25 by jhorta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #----------------------------LIBFT SOURCE FILES----------------------------------------------------------------------------------------------------
 LIBFT_PATH = ./libft
 
-LIBFT = $(LIBFT_PATH)/libft.a
+LIBFT_LIB = $(LIBFT_PATH)/libft.a
 
- $(LIBFT):
-# 		@$(MAKE) -c $(LIBFT_PATH) --no-print-directory
-
+ 
 
 #----------------------------MAINFILES----------------------------------------------------------------------------------------------------
 
-SRC = ./push_swap.c \
-	./algo/move_a_to_b.c ./algo/move_b_to_a.c ./algo/sort_stack.c ./algo/sort_stacks_a_b.c ./algo/sort_tree.c ./algo/stack_ini.c \
-	./moves/push.c ./moves/reverse_rotate.c ./moves/rotate.c ./moves/swap.c \
-	./nodes_ini/cost_analysis.c ./nodes_ini/index.c ./nodes_ini/int_node_a.c ./nodes_ini/int_node_b.c ./nodes_ini/set_cheapest.c ./nodes_ini/set_target_node_a.c ./nodes_ini/set_target_node_b.c \
-	./utils_error/check_duplicate.c ./utils_error/check_systax.c ./utils_error/free_errors.c ./utils_error/ft_free_stack.c \
-	./utils_sort/append_node.c ./utils_sort/get_cheapest.c ./utils_sort/is_sorted.c ./utils_sort/min_top.c ./utils_sort/nodes_find.c ./utils_sort/return_cheapest.c ./utils_sort/stack_len.c 
+SRC_ALGO = move_a_to_b.c move_b_to_a.c sort_stack.c sort_stacks_a_b.c sort_tree.c stack_ini.c
+SRC_MOVES = push.c reverse_rotate.c rotate.c swap.c 
+NODES_INI = cost_analysis.c index.c int_node_a.c int_node_b.c set_cheapest.c set_target_node_a.c set_target_node_b.c 
+UTILS_ERROR = check_duplicate.c check_systax.c free_errors.c ft_free_stack.c
+UTILS_SORT = append_node.c get_cheapest.c is_sorted.c min_top.c nodes_find.c return_cheapest.c stack_len.c 
 
-OBJ_DIR = objects
-OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
+SRC = $(addprefix ./algo/, $(SRC_ALGO)) \
+			$(addprefix ./moves/, $(SRC_MOVES)) \
+			$(addprefix ./nodes_ini/, $(NODES_INI)) \
+			$(addprefix ./utils_error/, $(UTILS_ERROR)) \
+			$(addprefix ./utils_sort/, $(UTILS_SORT))
+
+SRCOBJ = objects/
 #----------------------------TESTER AND COLOURS----------------------------------------------------------------------------------------------------
 
 GREEN = \033[1;32m
@@ -44,28 +46,31 @@ PUSH_SWAP_LIB = push_swap.a
 MAIN = push_swap.c
 CC = cc
 CFLAGS = -Wall -Werror -Werror -g
+OBJ = $(addprefix $(SRCOBJ), $(SRC:%.c=%.o))
 RM = rm -rf
 
 all: $(NAME)
 
-$(NAME): $(OBJ_DIR) $(OBJ) $(LIBFT)
+$(LIBFT_LIB):
+		@$(MAKE) -C $(LIBFT_PATH) --no-print-directory
+
+
+$(NAME): $(OBJ) $(LIBFT_LIB)
 		@echo "Creating $(NAME)"
-		@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
-		@echo "$(CYAN)make$(RESET)   $@ $(GREEN)[OK]$(RESET)"
+		@$(CC) $(CFLAGS) $(MAIN) $(OBJ) $(LIBFT_LIB) -o $(NAME)
+		@echo "$(CYAN)make$(RESET) $@ $(GREEN)[OK]$(RESET)"
 
-$(OBJ_DIR):
-		@mkdir -p $@
-
-$(OBJ_DIR)/%.o: %.C
+$(SRCOBJ)%.o: %.c
+		@mkdir -p $(SRCOBJ)
+		@mkdir -p $(dir $@)
 		@$(CC) $(CFLAGS) -c $< -o $@
-		
 
 clean:
-	@$(RM) $(OBJ_DIR)
+	@$(RM) $(SRCOBJ)
 	@$(MAKE) -C $(LIBFT_PATH) clean --no-print-directory
 	@echo "$(ORANGE)$@$(RESET)  $(NAME) $(GREEN)[OK]$(RESET)"
 
-fclean:
+fclean: clean
 	@$(RM) $(NAME)
 	@echo "Cleaning $(NAME)"
 	@$(MAKE) -C $(LIBFT_PATH) fclean --no-print-directory
@@ -78,4 +83,4 @@ fnorm :
 
 re: fclean all
 
-.PHONY: all clean fclean re test test_mac v tester
+.PHONY: clean fclean re test test_mac v tester

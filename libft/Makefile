@@ -6,14 +6,14 @@
 #    By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/10 13:28:10 by jhorta-c          #+#    #+#              #
-#    Updated: 2024/04/24 19:52:53 by jhorta-c         ###   ########.fr        #
+#    Updated: 2024/04/26 15:46:25 by jhorta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SOURCES = \
-	ft_memset.c \
+SOURCES = ft_memset.c \
 	ft_bzero.c \
+	ft_atol.c \
 	ft_memcpy.c \
 	ft_isalpha.c \
 	ft_isdigit.c \

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:47:06 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:19:30 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:34:39 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "libft.h"
+# include "../push_swap.h"
 
 # define UPPER_CASE "0123456789ABCDEF"
 # define LOWER_CASE "0123456789abcdef"
@@ -75,7 +75,6 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-void				ft_free_array(char **str);
 int					ft_putchar(int c);
 int					ft_puthex(int n, char c);
 int					ft_putnbr(long n, int base);
@@ -86,4 +85,5 @@ int					ft_putpoint(void *address);
 int					ft_putstr(char *str);
 int					ft_putunsnbr(unsigned int n);
 long				ft_atol(const char *str);
+void				ft_free_array(char **str);
 #endif
