@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/26 17:22:05 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:57:51 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 
 int	main(int ac, char **av)
 {
-	static t_stack	*a;
-	static t_stack	*b;
+	t_stack	*a;
+	t_stack	*b;
 
 	a = NULL;
 	b = NULL;
@@ -35,16 +35,18 @@ int	main(int ac, char **av)
 	else if (ac == 2)
 	{
 		av = ft_split(av[1], ' ');
-		stack_ini(&a, av + 1, true);
+		stack_ini(&a, av, true);
 		ft_free_array(av);
 	}
 	else
-	{
 		stack_ini(&a, av + 1, false);
-		ft_free_array(av);
-	}
 	if (!is_sorted(a))
+	{
+		ft_printf("adeus1,\n");
 		sort_stack(a, b);
+		ft_printf("adeus2,\n");
+	}
 	ft_free_stack(&a);
+	ft_printf("adeus3,\n");
 	return (0);
 }

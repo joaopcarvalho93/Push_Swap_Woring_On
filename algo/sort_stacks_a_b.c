@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:20:57 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 17:23:23 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:03:17 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,17 @@ void	sort_stacks_a_b(t_stack **a, t_stack **b)
 	{
 		int_node_a(*a, *b);
 		move_a_to_b(a, b);
+		ft_printf("sort1,\n");
 	}
 	sort_tree(a);
 	while (*b)
 	{
+		ft_printf("sort1,\n");
 		int_node_b(*a, *b);
 		move_b_to_a(a, b);
+		ft_printf("sort2,\n");
 	}
+	ft_printf("sort2,\n");
 	calculate_index(*a);
 	min_top(a);
 }

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:47:06 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/26 15:34:39 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:19:58 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,5 @@ int					ft_putstr(char *str);
 int					ft_putunsnbr(unsigned int n);
 long				ft_atol(const char *str);
 void				ft_free_array(char **str);
+void				ft_free_array1(char **str);
 #endif

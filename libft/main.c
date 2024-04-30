@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 17:46:39 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/26 21:11:13 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:20:20 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int	main(void)
 {
 	int		i = 0;
-	char	string[] = " w ergeh45 5464747 35656  ola rfrfrf ";
+	char	string[] = "  ";
 	char	**strings;
 
 	strings = ft_split(string, ' ');

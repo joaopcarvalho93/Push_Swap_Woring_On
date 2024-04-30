@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:42:32 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:07:02 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:11:16 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	push(t_stack **src, t_stack **dest)
 
 void	pa(t_stack **a, t_stack **b)
 {
-	push(a, b);
+	push(b, a);
 	ft_printf("pa\n");
 }
 
