@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:38:56 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 16:30:31 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 21:26:17 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	stack_ini(t_stack **stack, char **av, bool flag)
 	long	n;
 
 	i = 0;
-	if (!av)
+	if (!*av)
 		free_errors(stack, av, flag);
 	while (av[i])
 	{

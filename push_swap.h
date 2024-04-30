@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:25:58 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 22:59:14 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void		set_target_node_b(t_stack *a, t_stack *b);
 void		set_cheapest(t_stack *stack);
 
 // Algorithm
-void		sort_stack(t_stack *a, t_stack *b);
+void		sort_stack(t_stack **a, t_stack **b);
 void		sort_stacks_a_b(t_stack **a, t_stack **b);
 void		sort_tree(t_stack **stack);
 void		move_a_to_b(t_stack **a, t_stack **b);
@@ -71,6 +71,7 @@ int			stack_len(t_stack *stack);
 bool		is_sorted(t_stack *stack);
 t_stack		*get_cheapest(t_stack *stack);
 void		min_top(t_stack **a);
+void		to_push(t_stack **stack, t_stack *node_to_top, char stack_name);
 
 // Stack moves
 

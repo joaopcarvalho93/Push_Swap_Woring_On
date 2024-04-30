@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 16:57:51 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 21:36:04 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 // - Se AC for 2 fazer split para dividir uma array por numero
 // - Chamar funcao para meter as arrays na stack A
 // - Verificar se AC e > 2 e mandar flag false
+
 
 int	main(int ac, char **av)
 {
@@ -41,12 +42,7 @@ int	main(int ac, char **av)
 	else
 		stack_ini(&a, av + 1, false);
 	if (!is_sorted(a))
-	{
-		ft_printf("adeus1,\n");
-		sort_stack(a, b);
-		ft_printf("adeus2,\n");
-	}
+		sort_stack(&a, &b);
 	ft_free_stack(&a);
-	ft_printf("adeus3,\n");
 	return (0);
 }

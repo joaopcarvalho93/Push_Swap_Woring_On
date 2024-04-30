@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:32:28 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 16:46:44 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 18:36:01 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	ft_free_array(char **str)
 		return ;
 	while (str[i])
 	{
-		ft_printf("hello, %s\n", str[i]);
 		free(str[i]);
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:34 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:25:13 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/04/30 21:55:25 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,17 @@ t_stack	*find_min(t_stack *stack)
 	int		min;
 	t_stack	*min_node;
 
+	min_node = NULL;
 	if (!stack)
 		return (NULL);
 	min = INT_MAX;
-	min_node = NULL;
 	while (stack)
 	{
 		if (stack->value < min)
 		{
 			min = stack->value;
 			min_node = stack;
+			min_node->value = stack->value;
 		}
 		stack = stack->next;
 	}

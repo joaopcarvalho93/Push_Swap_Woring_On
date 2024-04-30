@@ -6,7 +6,7 @@
 #    By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 13:52:02 by jhorta-c          #+#    #+#              #
-#    Updated: 2024/04/26 15:57:25 by jhorta-c         ###   ########.fr        #
+#    Updated: 2024/04/30 23:16:37 by jhorta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC_ALGO = move_a_to_b.c move_b_to_a.c sort_stack.c sort_stacks_a_b.c sort_tree.
 SRC_MOVES = push.c reverse_rotate.c rotate.c swap.c 
 NODES_INI = cost_analysis.c index.c int_node_a.c int_node_b.c set_cheapest.c set_target_node_a.c set_target_node_b.c 
 UTILS_ERROR = check_duplicate.c check_systax.c free_errors.c ft_free_stack.c
-UTILS_SORT = append_node.c get_cheapest.c is_sorted.c min_top.c nodes_find.c return_cheapest.c stack_len.c 
+UTILS_SORT = append_node.c get_cheapest.c is_sorted.c min_top.c nodes_find.c return_cheapest.c stack_len.c to_push.c
 
 SRC = $(addprefix ./algo/, $(SRC_ALGO)) \
 			$(addprefix ./moves/, $(SRC_MOVES)) \
