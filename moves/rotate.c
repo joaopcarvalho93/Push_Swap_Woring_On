@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:27 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:22:48 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:50:29 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 static void	rotate(t_stack **stack)
 {
 	t_stack	*last_node;
+	t_stack	*tmp;
 
 	if (!*stack || !(*stack)->next)
 		return ;
 	last_node = find_last(*stack);
-	last_node->next = *stack;
+	tmp = *stack;
+	last_node->next = tmp;
 	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
-	last_node->next->prev = last_node;
-	last_node->next->next = NULL;
+	tmp->prev = last_node;
+	tmp->next = NULL;
 }
 
 void	ra(t_stack **a)

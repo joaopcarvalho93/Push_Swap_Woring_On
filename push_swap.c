@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/05/01 11:57:10 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/05/01 23:31:21 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 	}
 	else
 		stack_ini(&a, av + 1, false);
-	if (!is_sorted(a))
+	while (!is_sorted(a))
 		sort_stack(&a, &b);
 	ft_free_stack(&a);
 	return (0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks_a_b.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:20:57 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/05/01 16:12:24 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/05/01 22:28:02 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,24 @@ void	sort_stacks_a_b(t_stack **a, t_stack **b)
 		pb(a, b);
 	while (len_a-- > 3 && !is_sorted(*a))
 	{
-		printf("lena: %d\n", stack_len(*a));
-		printf("lenb: %d\n", stack_len(*b));
-		printf("stacAkordem :\n ");
-		print_stack(*a);
+		// printf("lena: %d\n", stack_len(*a));
+		// printf("lenb: %d\n", stack_len(*b));
+		// printf("stacAkordem :\n ");
+		// print_stack(*a);
+		// printf("stacBBBkordem :\n ");
+		// print_stack(*b);
 		int_node_a(*a, *b);
 		move_a_to_b(a, b);
 	}
 	sort_tree(a);
 	while (*b)
 	{
-		printf("moveblena: %d\n", stack_len(*a));
+		//printf("moveblena: %d\n", stack_len(*a));
 		//printf("moveblenb: %d\n", stack_len(*b));
 		//printf("movebstacBkordem :\n ");
-		//print_stack(*b);
 		int_node_b(*a, *b);
 		move_b_to_a(a, b);
+		//print_stack(*a);
 	}
 	calculate_index(*a);
 	min_top(a);

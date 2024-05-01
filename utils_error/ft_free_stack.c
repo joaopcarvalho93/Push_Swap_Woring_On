@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:12:45 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 21:17:41 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 23:30:23 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,10 @@ void	ft_free_stack(t_stack **stack)
 	tmp = NULL;
 	while (current)
 	{
-		//ft_printf("free1\n");
 		tmp = current->next;
-		//printf("curr: %p\n", current);
-		//printf("curr->next: %p\n", current->next);
-		//printf("temp: %p\n", tmp);
-		//ft_printf("free2\n");
 		current->value = 0;
 		free(current);
 		current = tmp;
-		//ft_printf("free3\n");
 	}
-	//ft_printf("free4\n");
 	*stack = NULL;
 }

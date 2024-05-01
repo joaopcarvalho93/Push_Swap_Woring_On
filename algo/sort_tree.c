@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:03:47 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 17:29:28 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 20:34:06 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	sort_tree(t_stack **stack)
 {
 	t_stack	*biggest;
-
+	if (!*stack)
+		return ;
 	biggest = find_max(*stack);
 	if ((*stack)->value == biggest->value)
 		ra(stack);

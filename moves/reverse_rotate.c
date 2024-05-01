@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:39:20 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:07:39 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 23:29:18 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 static void	reverse_ro(t_stack **stack)
 {
 	t_stack	*last_node;
+	t_stack	*tmp;
 
 	if (!*stack || !(*stack)->next)
 		return ;
 	last_node = find_last(*stack);
+	tmp = last_node->prev;
 	(*stack)->prev = last_node;
-	last_node->prev->next = NULL;
 	last_node->next = *stack;
+	tmp->next = NULL;
 	last_node->prev = NULL;
 	*stack = last_node;
 }

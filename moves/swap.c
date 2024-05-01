@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 17:06:03 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:27:13 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 23:28:15 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 static void	swap(t_stack **stack)
 {
-	if (!*stack || !(*stack)->next)
-		return ;
-	*stack = (*stack)->next;
-	(*stack)->prev->prev = *stack;
-	(*stack)->prev->next = (*stack)->next;
-	if ((*stack)->next)
-		(*stack)->next->prev = (*stack)->prev;
-	(*stack)->prev = NULL;
-	(*stack)->next = (*stack)->prev;
+	int	tmp;
+
+	tmp = (*stack)->value;
+	(*stack)->value = (*stack)->next->value;
+	(*stack)->next->value = tmp;
 }
 
 void	sa(t_stack **a)

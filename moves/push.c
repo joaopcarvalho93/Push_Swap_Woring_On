@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:42:32 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 22:15:39 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:12:24 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ static void	push(t_stack **src, t_stack **dest)
 	t_stack	*tmp;
 
 	if (!*src)
-		return ;
+		return ;	
 	tmp = *src;
 	*src = (*src)->next;
+	if (*src)
+		(*src)->prev = NULL;
 	if (!(*dest))
 	{
 		*dest = tmp;
