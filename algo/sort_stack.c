@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:24:16 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 22:05:40 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:11:50 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,8 @@ void	sort_stack(t_stack **a, t_stack **b)
 		sort_tree(a);
 	else
 		sort_stacks_a_b(a, b);
-	//ft_free_array(a);
+	printf("stack a no final\n");
+	print_stack(*a);
+	printf("stack b no final\n");
+	print_stack(*b);
 }

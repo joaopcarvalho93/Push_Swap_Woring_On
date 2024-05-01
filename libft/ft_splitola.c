@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_splitola.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:39:17 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 14:01:48 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:57:52 by jpcarvalho       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,6 @@ char	**ft_split(char const *s, char c)
 	if (!str)
 		return (NULL);
 	if (!repartir(s, c, str))
-		return(NULL);
+		return (NULL);
 	return (str);
 }

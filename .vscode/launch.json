@@ -1,29 +1,14 @@
 {
   "version": "0.2.0",
   "configurations": [
+	
     {
-      "name": "(gdb) Launch",
-      "type": "cppdbg",
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/push_swap",
-      "args": ["3 5 2"],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
-      ]
+      "args": ["8 3 5 1 4 2 7 6"],
+      "cwd": "/Users/jpcarvalho/42_Lisboa/Push_Swap_Woring_On",
+      "program": "/Users/jpcarvalho/42_Lisboa/Push_Swap_Woring_On/push_swap",
     }
   ]
 }
