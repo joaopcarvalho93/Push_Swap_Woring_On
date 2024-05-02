@@ -13,11 +13,11 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h>
 # include "../push_swap.h"
+# include <stdarg.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 # define UPPER_CASE "0123456789ABCDEF"
 # define LOWER_CASE "0123456789abcdef"

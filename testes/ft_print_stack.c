@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 17:46:39 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/30 14:20:20 by jhorta-c         ###   ########.fr       */
+/*   Created: 2024/05/02 13:43:35 by jhorta-c          #+#    #+#             */
+/*   Updated: 2024/05/02 14:33:29 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include "libft.h"
+#include "../push_swap.h"
 
-int	main(void)
+void	print_stack(t_stack *stack)
 {
-	int		i = 0;
-	char	string[] = "  ";
-	char	**strings;
+	t_stack	*tmp;
 
-	strings = ft_split(string, ' ');
-	while (strings[i])
+	tmp = stack;
+	while (tmp)
 	{
-		printf("%s\n", strings[i]);
-		i++;
+		printf("%d\n", tmp->value);
+		tmp = tmp->next;
 	}
-	return (0);
 }
+
+//printf("stack a no final\n");
+// rint_stack(*a);
+//printf("stack b no final\n");
+//print_stack(*b);

@@ -18,7 +18,7 @@ void	ft_free_stack(t_stack **stack)
 	t_stack	*tmp;
 
 	if (!*stack)
-		return;
+		return ;
 	current = *stack;
 	tmp = NULL;
 	while (current)

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:38:31 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/05/01 22:26:01 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:42:13 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	move_b_to_a(t_stack **a, t_stack **b)
 		return ;
 	while (*a != top_node)
 	{
-		//printf("moveblena: %d\n", stack_len(*a));
-		//print_stack(*a);
 		if (top_node->above_medium)
 			ra(a);
 		else

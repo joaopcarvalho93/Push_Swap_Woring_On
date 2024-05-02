@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
 #include "../libft/libft.h"
+#include "../push_swap.h"
 
 // Objectivo criar uma stack com os valores dados no input.
 // Verificar se:
-// - Existem valores duplicados 
-// - Erros de syntax 
+// - Existem valores duplicados
+// - Erros de syntax
 // - Over ou untherflow
 
 // usar a flag se for verdadeiro fazer free a AV

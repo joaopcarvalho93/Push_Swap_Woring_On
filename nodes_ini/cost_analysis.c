@@ -18,7 +18,7 @@
 // Se tiver em cima o custo e o index.
 // se tiver em baixo e o len - index.
 // O total e a soma do custo para mover na a e b.
-// PARA MELHORAR: ter em consideracao que podemos em 
+// PARA MELHORAR: ter em consideracao que podemos em
 // alguns casos mover as duas stacks
 
 void	cost_analysis(t_stack *a, t_stack *b)

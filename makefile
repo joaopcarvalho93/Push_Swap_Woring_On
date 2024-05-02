@@ -6,7 +6,7 @@
 #    By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 13:52:02 by jhorta-c          #+#    #+#              #
-#    Updated: 2024/05/02 00:23:03 by jhorta-c         ###   ########.fr        #
+#    Updated: 2024/05/02 15:05:32 by jhorta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC = $(addprefix ./algo/, $(SRC_ALGO)) \
 			$(addprefix ./moves/, $(SRC_MOVES)) \
 			$(addprefix ./nodes_ini/, $(NODES_INI)) \
 			$(addprefix ./utils_error/, $(UTILS_ERROR)) \
+			$(addprefix ./testes/, $(TEST)) \
 			$(addprefix ./utils_sort/, $(UTILS_SORT))
 
 SRCOBJ = objects/
@@ -85,6 +86,11 @@ fclean: clean
 	@echo "$(RED)$@$(RESET) $(NAME) $(GREEN)[OK]$(RESET)"
 
 re: fclean all
+
+fnorm :
+	@$(MAKE) -s fclean
+	@python3 -m c_formatter_42 $(SRC) */*h
+	norminette $(SRC)
 	
 
 test: all
@@ -95,19 +101,15 @@ test: all
 	@echo "-> Valgrind Result:"
 	-@$(VAL) ./$(NAME) $$(cat random_numbers.txt) > push_valgrind_output.txt 2>&1
 	@grep "total heap usage\|All heap blocks" push_valgrind_output.txt | sed 's/==[0-9]*==/                   /g'
-	#@printf "$(GREEN)Checker: $(RESET)"
-	#@$(RUN) | $(CHECKER)
 	@echo "\n\........................................Testing_Norminette......................................../\n"
 	@norminette
 	@echo "\n"
-	@$(RM) random_numbers.txt output.txt push_valgrind_output.txt
-	@$(MAKE) -s fclean
 
 tester: re
 	@echo "\n"
 	@curl https://git.homegu.com/raw/hu8813/tester_push_swap/main/pstester.py | python3 -
 	
-
+# git clone https://github.com/o-reo/push_swap_visualizer.git
 
 .PHONY: clean fclean re test test_mac v tester
 

@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 18:28:53 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/05/01 23:56:00 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:02:57 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,5 @@ void		pb(t_stack **a, t_stack **b);
 //teste
 
 //void		print_stack(t_stack *a);
-
 
 #endif

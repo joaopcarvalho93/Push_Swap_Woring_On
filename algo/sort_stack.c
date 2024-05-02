@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:24:16 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/05/01 19:56:15 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:03:25 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,4 @@ void	sort_stack(t_stack **a, t_stack **b)
 		sort_tree(a);
 	else
 		sort_stacks_a_b(a, b);
-	// printf("stack a no final\n");
-	// print_stack(*a);
-	// printf("stack b no final\n");
-	// print_stack(*b);
 }

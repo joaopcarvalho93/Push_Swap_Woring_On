@@ -6,7 +6,7 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:24:38 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/05/01 23:31:21 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:34:23 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 // - Se AC for 2 fazer split para dividir uma array por numero
 // - Chamar funcao para meter as arrays na stack A
 // - Verificar se AC e > 2 e mandar flag false
-
 
 int	main(int ac, char **av)
 {

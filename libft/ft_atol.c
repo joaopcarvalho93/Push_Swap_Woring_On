@@ -6,11 +6,12 @@
 /*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:03:56 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/04/24 18:04:13 by jhorta-c         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:03:53 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 long	ft_atol(const char *str)
 {
@@ -30,6 +31,8 @@ long	ft_atol(const char *str)
 	while (ft_isdigit(str[i]))
 	{
 		nbr = nbr * 10 + (str[i] - '0');
+		if (nbr > INT_MAX)
+			return (nbr * sign);
 		i++;
 	}
 	return (nbr * sign);

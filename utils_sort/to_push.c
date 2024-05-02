@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   to_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpcarvalho <jpcarvalho@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 22:54:30 by jhorta-c          #+#    #+#             */
-/*   Updated: 2024/05/01 16:07:50 by jpcarvalho       ###   ########.fr       */
+/*   Updated: 2024/05/02 13:43:20 by jhorta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	to_push(t_stack **stack, t_stack *node_to_top, char stack_name)
 		return ;
 	while (*stack != node_to_top)
 	{
-		//printf("entrou push: \n");
 		if (stack_name == 'a')
 		{
 			if (node_to_top->above_medium)

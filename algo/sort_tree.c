@@ -15,6 +15,7 @@
 void	sort_tree(t_stack **stack)
 {
 	t_stack	*biggest;
+
 	if (!*stack)
 		return ;
 	biggest = find_max(*stack);
