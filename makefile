@@ -6,7 +6,7 @@
 #    By: jhorta-c <jhorta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/18 13:52:02 by jhorta-c          #+#    #+#              #
-#    Updated: 2024/05/02 00:08:15 by jhorta-c         ###   ########.fr        #
+#    Updated: 2024/05/02 00:23:03 by jhorta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ RESET = \033[0m
 VAL := valgrind --leak-check=full --show-leak-kinds=all -s --verbose --trace-children=yes
 
 RANDOM_NUMBERS	:= $(shell shuf -i 1-500 -n 500)
+CHECKER = ./checker_linux $(READ_NBRS)
 
 
 #----------------------------MAKEFILE RULES COMPILATION----------------------------------------------------------------------------------------------------
@@ -84,6 +85,7 @@ fclean: clean
 	@echo "$(RED)$@$(RESET) $(NAME) $(GREEN)[OK]$(RESET)"
 
 re: fclean all
+	
 
 test: all
 	@echo "/....................................... Testing Push_Swap ........................................\ \n"
@@ -93,6 +95,8 @@ test: all
 	@echo "-> Valgrind Result:"
 	-@$(VAL) ./$(NAME) $$(cat random_numbers.txt) > push_valgrind_output.txt 2>&1
 	@grep "total heap usage\|All heap blocks" push_valgrind_output.txt | sed 's/==[0-9]*==/                   /g'
+	#@printf "$(GREEN)Checker: $(RESET)"
+	#@$(RUN) | $(CHECKER)
 	@echo "\n\........................................Testing_Norminette......................................../\n"
 	@norminette
 	@echo "\n"
